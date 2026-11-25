@@ -1,0 +1,6 @@
+{
+  "name": "Mucuw — Keuangan Pribadi & Mini POS",
+  "description": "Aplikasi web manajemen keuangan pribadi dan bisnis (Mini POS) bergaya modern glossy pastel berbasis LocalStorage dengan backup & restore JSON, kustomisasi widget, dan laporan arus kas.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": []
+}

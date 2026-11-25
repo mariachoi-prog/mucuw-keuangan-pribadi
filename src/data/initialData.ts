@@ -1,0 +1,137 @@
+import { AppState, Category } from '../types/finance';
+
+export const MASCOT_LAPTOP_SRC = '/src/assets/images/capybara_laptop_mascot_1795623323519.jpg';
+export const MASCOT_COACH_SRC = '/src/assets/images/capybara_finance_coach_1795623323703.jpg';
+export const WIDGET_AESTHETIC_BG_SRC = '/src/assets/images/pastel_cloud_aesthetic_1795623324691.jpg';
+
+export const INITIAL_CATEGORIES: Category[] = [
+  {
+    id: 'cat_food',
+    name: 'Makan & Minum',
+    nameEn: 'Food & Drinks',
+    emoji: '🧋',
+    color: '#EA580C',
+    bgColor: '#FFEDD5',
+    type: 'expense',
+  },
+  {
+    id: 'cat_transport',
+    name: 'Transport',
+    nameEn: 'Transport',
+    emoji: '🚇',
+    color: '#0284C7',
+    bgColor: '#E0F2FE',
+    type: 'expense',
+  },
+  {
+    id: 'cat_shopping',
+    name: 'Belanja',
+    nameEn: 'Shopping',
+    emoji: '🛍️',
+    color: '#DB2777',
+    bgColor: '#FCE7F3',
+    type: 'expense',
+  },
+  {
+    id: 'cat_entertainment',
+    name: 'Hiburan',
+    nameEn: 'Entertainment',
+    emoji: '🎬',
+    color: '#9333EA',
+    bgColor: '#F3E8FF',
+    type: 'expense',
+  },
+  {
+    id: 'cat_bills',
+    name: 'Tagihan',
+    nameEn: 'Bills',
+    emoji: '⚡',
+    color: '#D97706',
+    bgColor: '#FEF3C7',
+    type: 'expense',
+  },
+  {
+    id: 'cat_salary',
+    name: 'Gaji',
+    nameEn: 'Salary',
+    emoji: '💸',
+    color: '#059669',
+    bgColor: '#D1FAE5',
+    type: 'income',
+  },
+  {
+    id: 'cat_freelance',
+    name: 'Usaha / Freelance',
+    nameEn: 'Business / Freelance',
+    emoji: '💻',
+    color: '#0D9488',
+    bgColor: '#CCFBF1',
+    type: 'income',
+  },
+  {
+    id: 'cat_biz_revenue',
+    name: 'Omzet Bisnis',
+    nameEn: 'Business Revenue',
+    emoji: '🏪',
+    color: '#7C3AED',
+    bgColor: '#EDE9FE',
+    type: 'income',
+    isBusiness: true,
+  },
+  {
+    id: 'cat_biz_cogs',
+    name: 'Modal / HPP',
+    nameEn: 'COGS & Supplies',
+    emoji: '📦',
+    color: '#E11D48',
+    bgColor: '#FFE4E6',
+    type: 'expense',
+    isBusiness: true,
+  },
+  {
+    id: 'cat_adjust',
+    name: 'Penyesuaian Saldo',
+    nameEn: 'Balance Adjustment',
+    emoji: '⚖️',
+    color: '#475569',
+    bgColor: '#F1F5F9',
+    type: 'both',
+  },
+  {
+    id: 'cat_transfer',
+    name: 'Pindah Saldo',
+    nameEn: 'Wallet Transfer',
+    emoji: '⇄',
+    color: '#6366F1',
+    bgColor: '#E0E7FF',
+    type: 'both',
+  },
+];
+
+export function createEmptyAppState(profileName = 'Teman Mucuw'): AppState {
+  return {
+    wallets: [],
+    categories: INITIAL_CATEGORIES,
+    transactions: [],
+    posProducts: [],
+    posOrders: [],
+    budgetsAndDreams: [],
+    investments: [],
+    widgetConfig: {
+      mode: 'expense',
+      backgroundType: 'gradient',
+      gradient: 'classic',
+      customPhotoDataUrl: null,
+      period: 'month',
+      categoryId: 'all',
+      walletId: 'all',
+      budgetLimit: 1000000,
+    },
+    settings: {
+      profileName: profileName.trim() || 'Teman Mucuw',
+      theme: 'glossy',
+      language: 'id',
+      soundEnabled: true,
+    },
+  };
+}
